@@ -4,9 +4,6 @@ var mysql = require("mysql");
 //hide password with the dotenv package
 require("dotenv").config();
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL)
-} else {
   var connection = mysql.createConnection({
     port: 3306,
     host: "localhost",
@@ -14,7 +11,7 @@ if (process.env.JAWSDB_URL) {
     password: process.env.MYSQLPASSWORD,
     database: "wines_db"
   });
-};
+
 
 // Make connection
 connection.connect(function(err) {
