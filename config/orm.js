@@ -3,13 +3,13 @@ var connection = require('./connection.js');
 
 
 // Connect to MySQL
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  };
-  console.log('connected as id ' + connection.threadId);
-});
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error('error connecting: ' + err.stack);
+//     return;
+//   };
+//   console.log('connected as id ' + connection.threadId);
+// });
 
 
 // Methods for MySQL commands

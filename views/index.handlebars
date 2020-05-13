@@ -8,11 +8,13 @@
         <!-- Dynamically Insert Wines Here -->
         {{#each wines}}
           {{#unless drank}}
-          <form action="wine/drank/{{id}}" method="POST">
+          {{!-- make click event for button in FE JS --}}
+          <form action="wine/drank/{{id}}" method="PUT">
             <div class="input-group">
               <li class="form-control">{{id}}. {{wine_name}}</li>
                 <span class="input-group-btn">
-                  <button class="btn btn-success drank-button" type="submit">Drink It!</button>
+                  {{!-- make id prop == to id --}}
+                  <button class="btn btn-success drink-button" type="submit">Drink It!</button>
                 </span>
             </div>
           </form>

@@ -31,8 +31,8 @@ router.post('/wine/create', function (req, res) {
 
 
 // Drink a wine
-router.post('/wine/drink/:id', function (req, res) {
-  wine.updateOne(req.params.id, function() {
+router.put('/wine/drink/:id', function (req, res) {
+  wine.updateOne(req.body.id, function() {
     res.redirect('/index');
   });
 });
